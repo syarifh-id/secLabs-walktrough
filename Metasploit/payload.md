@@ -1,15 +1,14 @@
-Payloads
-A Payload in Metasploit refers to a module that aids the exploit module in (typically) returning a shell to the attacker. The payloads are sent together with the exploit itself to bypass standard functioning procedures of the vulnerable service (exploits job) and then run on the target OS to typically return a reverse connection to the attacker and establish a foothold (payload's job).
-
-note :
+# Payloads
+A Payload in Metasploit refers to a module that aids the exploit module in (typically) returning a shell to the attacker.
+ *_note :_*
 >
 The Payload in cybersecurity is the malicious code that cyberattackers use to harm computers and networks.
 
 
-
-There are three different types of payload modules in the Metasploit Framework: Singles, Stagers, and Stages. Using three typologies of payload interaction will prove beneficial to the pentester. It can offer the flexibility we need to perform certain types of tasks. Whether or not a payload is staged is represented by / in the payload name.
-
-For example, windows/shell_bind_tcp is a single payload with no stage, whereas windows/shell/bind_tcp consists of a stager (bind_tcp) and a stage (shell).
+There are three different types of payload modules in the Metasploit Framework:
+1. Singles
+2. Stagers
+3. Stages
 
 Singles
 A Single payload contains the exploit and the entire shellcode for the selected task. Inline payloads are by design more stable than their counterparts because they contain everything all-in-one. However, some exploits will not support the resulting size of these payloads as they can get quite large. Singles are self-contained payloads. They are the sole object sent and executed on the target system, getting us a result immediately after running. A Single payload can be as simple as adding a user to the target system or booting up a process.
